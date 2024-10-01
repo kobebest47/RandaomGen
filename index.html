@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>交易抽獎</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <!-- Include SweetAlert library -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 id="headerTitle" style="display: none;">$5000</h1>
+    <h1 id="headerTitle2" style="display: none;text-align: center;">$10,000</h1>
+    <h1 id="headerNames"></h1>
+     <div class="button" id="startButton5">開始</div> 
+    <audio id="audioPlayer" src="sound/drumloop.mp3" ></audio>
+    <audio id="audioPlayer2" src="sound/drumcrash.mp3" ></audio>
+    <div class="button" id="startButton4">第一獎</div>
+    <div class="button" id="startButton1">第一獎</div>
+    <!-- <div class="button" id="stopButton">Stop</div> -->
+    <div id="timerWrapper">Time left: <span id="timer"></span></div>
+    <div id="timesUp"></div>
+    <div id="lastDisplayedName"><span id="lastDisplayed"></span></div>
+    <input type="file" id="fileInput" />
+    <input type="text" id="startpoint" style="display: block;" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+<script>
+  $(document).ready(function() {
+      $('#fileInput').on('change', function() {
+          if ($(this).val()) {
+              $('#startButton5').show();
+          } else {
+              $('#startButton5').hide();
+          }
+      });
+
+      $('#startButton5').hide();
+  });
+</script>
+</html>

@@ -1,0 +1,192 @@
+body {
+	margin-top: 350px;
+	background: rgb(31, 210, 31);
+}
+
+h1#headerNames {
+    height: 181px;
+    width: 454px; 
+    border-radius: 10px;
+    color: #9c0000;
+    background-color: transparent; 
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px; 
+    text-align: center;
+    cursor: pointer;
+    align-items: flex-start;
+    justify-content: center; 
+    margin: 1px auto;
+    line-height: 70px; 
+    position: relative; 
+	padding-top: 60px;
+}
+
+
+h1#headerNames::before {
+    position: absolute;
+    content: '';
+    background-image: url(images/lighten-2.gif?ver=3  );
+    width: 454px;
+    height: 181px;
+    background-repeat: no-repeat;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+}
+
+h1#headerNames::after {
+    position: absolute;
+    content: '';
+    background-color: #d3d3d3; 
+    width: 385px;
+    height: 135px;
+    z-index: -1; 
+    top: 22px;
+    left: 34px;
+    border-radius: 10px;
+}
+/* h1#headerNames {
+
+    height: 70px;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #9c0000;
+    background-color: #c2cfd2b1;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center; 
+    margin: 1px auto;
+    line-height: 70px; 
+    position: relative;
+
+
+}
+h1#headerNames::before {
+	content: '';
+	position: absolute;
+	width: 350px;
+	height: 70px;
+	z-index: -1;
+} */
+
+/* h1#headerNames::after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height:100%;	
+	z-index:100;
+	background-image: url(images/lighten-1.gif);
+} */
+
+/* Define the custom class for the modal size */
+.custom-modal-size {
+    width: 400px; /* Set the desired width */
+    height:320px; 
+}
+
+.button {
+	width: 40px;
+	margin: auto;
+	/* margin-top: 200px; */
+	padding: 10px;
+	background: #9c0000;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: none;
+	cursor: pointer;
+}
+
+
+
+#stopButton {
+	background: #ff0000;
+	display: none;
+}
+
+#timerWrapper {
+	margin: 50px 0;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 50px;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#timerWrapper.visible {
+	opacity: 1;
+}
+
+#timesUp {
+	padding-top: 20%;
+	background-color: red;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 100px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: none;
+	a {
+		margin: 100px auto;
+		font-size: 15px;
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		display: none;
+	}
+}
+
+#timesUp.backgroundRed {
+	background-color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 50px;
+	}
+}
+
+
+@keyframes flash {
+	from {
+	  opacity: 1;
+	}
+	to {
+	  opacity: 0;
+	}
+  }
+  
+  .flash {
+	animation: flash 0.5s infinite alternate;
+  }
+  .custom-modal-size .swal2-popup {
+    width: 500px; 
+    height: auto; 
+    max-width: 80%; 
+}
+
+.custom-modal-size {
+    max-height: 400px;
+    overflow-y: auto; 
+	height: 250px; 
+}
